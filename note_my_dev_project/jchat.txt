@@ -1,0 +1,75 @@
+npx sequelize-cli model:generate --name ChatAzarbaijanSharqhi --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatAzarbaijanQharbi  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatArdabil  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatEsfahan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatAlborz  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatElam  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatBoshahr  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatTehran  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatChaharmahalBakhtiari  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKhorasanJenobi  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKhorasanRazavi  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKhorasanShomali  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKhozestan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatZanjan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatSemnan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatSistanBlochestan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatFars  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatQhazvin  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatQhom  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKurdistan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKerman  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKermanshah  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatKahkiloyehBoyerahman  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatGolestan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatGilan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatLorestan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatMazandaran  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatMarkazi  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatHormozgan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatHamadan  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+npx sequelize-cli model:generate --name ChatYazd  --attributes message:string,ip:string,user_id:integer,province_table_id:integer,type:string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

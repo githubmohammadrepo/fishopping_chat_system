@@ -1,0 +1,41 @@
+npx sequelize-cli model:generate --name UserAzarbaijanSharqhi --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserAzarbaijanQharbi  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserArdabil  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserEsfahan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserAlborz  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserElam  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserBoshahr  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserTehran  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserChaharmahalBakhtiari  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKhorasanJenobi  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKhorasanRazavi  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKhorasanShomali  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKhozestan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserZanjan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserSemnan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserSistanBlochestan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserFars  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserQhazvin  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserQhom  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKurdistan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKerman  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKermanshah  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserKahkiloyehBoyerahman  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserGolestan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserGilan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserLorestan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserMazandaran  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserMarkazi  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserHormozgan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserHamadan  --attributes username:string,password:string
+npx sequelize-cli model:generate --name UserYazd  --attributes username:string,password:string
+
+
+
+
+
+
+
+
+
+

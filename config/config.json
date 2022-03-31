@@ -1,0 +1,37 @@
+{
+    "development": {
+        "username": "root",
+        "password": null,
+        "database": "fishopping_jchat",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "dialectOptions": {
+
+            "dateStrings": true,
+            "typeCast": true,
+            "timezone": "+04:30"
+        },
+        "timezone": "+04:30"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "fishopping_jchat",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "fishopping_jchat",
+        "password": null,
+        "database": "fishopping_jchat",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "dialectOptions": {
+
+            "dateStrings": true,
+            "typeCast": true,
+            "timezone": "+03:30"
+        },
+        "timezone": "+03:30"
+    }
+}
