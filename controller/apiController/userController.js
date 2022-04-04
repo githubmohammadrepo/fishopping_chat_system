@@ -1,8 +1,8 @@
 var exports = module.exports = {}
 const { process_params } = require("express/lib/router");
-const userValidation = require("../../validation/userValidation");
+const userValidation = require("../../validation/api/userValidation");
 const { User } = require('../../models/index');
-console.log(User)
+
 exports.postUser = async function(req, res) {
     try {
 
@@ -16,7 +16,7 @@ exports.postUser = async function(req, res) {
             res.send(error)
         })
     } catch (error) {
-        console.log(error)
+        
 
         res.send(error)
     }

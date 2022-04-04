@@ -25,14 +25,17 @@
                         <img class="brand" src="/adminTemplate/assets/img/bootstraper-logo.png" alt="bootstraper logo">
                     </div>
                     <h6 class="mb-4 text-muted">Login to your account</h6>
-                    <form action="" method="">
+                    <form action="/admin/auth/login/password" method="post">
+
+                        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email adress</label>
-                            <input type="email" class="form-control" placeholder="Enter Email" required>
+                            <input type="email"  name="username" class="form-control" placeholder="Enter Email" required>
                         </div>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="Password" required>
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
                         </div>
                         <div class="mb-3 text-start">
                             <div class="form-check">
@@ -42,6 +45,14 @@
                               </label>
                             </div>
                         </div>
+
+                         <div class="mb-3 text-center">
+                            <ul class=" list-group mb-3">
+                                <li class="list-group-item text-danger">{{errorValidation}}</li>
+                            </ul>
+                        </div>
+
+
                         <button class="btn btn-success shadow-2 mb-4">Login</button>
                         <a href="/admin/auth/register" class="btn btn-primary text-white shadow-2 mb-4">Register</a>
 

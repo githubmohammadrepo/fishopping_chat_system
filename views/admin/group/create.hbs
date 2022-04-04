@@ -122,19 +122,7 @@
                                         class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu" aria-labelledby="nav1">
-                                    <ul class="nav-list">
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-list"></i> Access Logs</a>
-                                        </li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-database"></i> Back
-                                                ups</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i>
-                                                Updates</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i>
-                                                Roles</a></li>
-                                    </ul>
+                                        {{> quickLinks}}
                                 </div>
                             </div>
                         </li>
@@ -178,7 +166,7 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Lorem ipsum dolor sit amet consectetur.</h5>
+
                                         <form action="/admin/group/" method="post" accept-charset="utf-8">
                                             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
@@ -193,8 +181,8 @@
                                                 <label class="col-sm-2 form-label" for="description">Group
                                                     Description</label>
                                                 <div class="col-sm-10">
-                                                    <textarea type="text" rows="4" name="description" placeholder="Group Description"
-                                                        class="form-control"></textarea>
+                                                    <textarea type="text" rows="4" name="description"
+                                                        placeholder="Group Description" class="form-control"></textarea>
 
                                                 </div>
                                             </div>
@@ -202,6 +190,9 @@
 
                                             <div class="mb-3 row justify-content-center">
                                                 <div class="col-sm-10 offset-sm-2 text-center">
+                                                    <ul class=" list-group mb-3">
+                                                        <li class="list-group-item text-danger">{{error}}</li>
+                                                    </ul>
                                                     <input type="submit" value="Save Group" class="btn btn-primary">
                                                 </div>
                                             </div>

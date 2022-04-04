@@ -13,7 +13,7 @@ exports.makeModelName = function(table_name) {
         table_name = table_name.join('');
         return table_name;
     } catch (error) {
-        console.log(error.message)
+        
         return null;
     }
 }

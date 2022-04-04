@@ -30,19 +30,46 @@
                         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email adress</label>
-                            <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                            {{#if oldPassedData.username}}
+                                <input type="email" name="username" class="form-control" value="{{oldPassedData.username}}" placeholder="Enter Email" required>
+                            {{else}}
+                                <input type="email" name="username" class="form-control" placeholder="Enter Email" required>
+                            {{/if}}
                         </div>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                            {{#if oldPassedData.password}}
+                                <input type="password" name="password" class="form-control"  value="{{oldPassedData.password}}" placeholder="Password" required>
+                            {{else}}
+                                <input type="password" name="password" class="form-control"  placeholder="Password" required>
+                            {{/if}}
                         </div>
 
                          <div class="mb-3 text-start">
                             <label for="password" class="form-label">Repeat Password</label>
+                            {{#if oldPassedData.repeat_password}}
+                            <input type="password" name="repeat_password" class="form-control" value="{{oldPassedData.repeat_password}}" placeholder="Repeat Password" required>
+                            {{else}}
                             <input type="password" name="repeat_password" class="form-control" placeholder="Repeat Password" required>
+                            {{/if}}
+                            
                         </div>
-                      
-                        <button class="btn btn-success shadow-2 mb-4">Register</button>
+
+                        <div class="mb-3 text-start">
+                            <label for="privateCode" class="form-label">Private Code</label>
+                            {{#if oldPassedData.privateCode}}
+                                <input type="text" name="privateCode" class="form-control" value="{{oldPassedData.privateCode}}" placeholder="private code" required>
+                            {{else}}
+                                <input type="text" name="privateCode" class="form-control" placeholder="private code" required>
+                            {{/if}}
+                        </div>
+                         <div class="mb-3 text-center">
+                            <ul class=" list-group mb-3">
+                                <li class="list-group-item text-danger">{{errorValidation}}</li>
+                            </ul>
+                        </div>
+
+                        <button type="submit" class="btn btn-success shadow-2 mb-4">Register</button>
                         <a href="/admin/auth" class="btn btn-primary text-white shadow-2 mb-4">Login</a>
                     </form>
                    

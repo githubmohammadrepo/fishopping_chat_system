@@ -5,21 +5,11 @@ var router = express.Router();
 const userController = require('./../../controller/apiController/userController');
 const model = require('./../../models/index');
 const modelHelper = require('../../helpers/modelHelpers');
-
+var {eq,isnt} = require('handlebars-helpers')();
 /* GET users listing. */
 router.get('/', async function(req, res, next) {
-
-    let table_name = 'user';
-
-    model_name = modelHelper.makeModelName(table_name);
-
-    let result = model[model_name];
-    result = await result.create({
-        username: "mohammad",
-        province_table_id: 20,
-        openId: "mohammad"
-    });
-    res.send(result)
+ 
+    res.render('test/helper',{name:"mohammad",find:"mohammad1",eq:eq,isnt:isnt})
 });
 
 

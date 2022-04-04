@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 
             models.UserGroup.belongsToMany(models.UserGroup, { as: "observerGroup", foreignKey: 'observer_group_id', through: 'GroupAccess' });
             models.UserGroup.belongsToMany(models.UserGroup, { as: "watchingGroup", foreignKey: 'watching_group_id', through: 'GroupAccess' });
+            
 
 
         }
