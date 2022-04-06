@@ -1,6 +1,6 @@
 var exports = module.exports = {}
 const Joi = require('joi');
-exports.createAdminValidationSchema = (req) => {
+exports.createUserValidationSchema = (req) => {
 
     const schema = Joi.object({
             username: Joi.string()

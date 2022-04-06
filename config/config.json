@@ -11,7 +11,8 @@
             "typeCast": true,
             "timezone": "+04:30"
         },
-        "timezone": "+04:30"
+        "timezone": "+04:30",
+        "port": "/opt/lampp/var/mysql/mysql.sock"
     },
     "test": {
         "username": "root",
