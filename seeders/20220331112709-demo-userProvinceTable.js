@@ -1,5 +1,7 @@
 'use strict';
-const moment = require('moment')
+const moment = require('moment');
+var crypto = require("crypto");
+
 module.exports = {
     async up(queryInterface, Sequelize) {
         /**
@@ -46,11 +48,13 @@ module.exports = {
         ];
 
 
-        await queryInterface.bulkInsert('userprovincetables', tableNames.map((table) => {
+        await queryInterface.bulkInsert('UserProvinceTables', tableNames.map((table) => {
             return {
                 id: table.id,
                 userTableName: table.tableName,
-                chatTableName: table.tableName,
+                privateToken: crypto.randomBytes(20).toString('hex'),
+                province_id: table.id,
+                province_name: table.tableName,
                 createdAt: moment(new Date()).format('yyyy-MM-D H:m:s'),
                 updatedAt: moment(new Date()).format('yyyy-MM-D H:m:s')
             }
@@ -65,7 +69,7 @@ module.exports = {
          * await queryInterface.bulkDelete('People', null, {});
          */
 
-        await queryInterface.bulkDelete('userprovincetables', null, {});
+        await queryInterface.bulkDelete('UserProvinceTables', null, {});
 
     }
 };

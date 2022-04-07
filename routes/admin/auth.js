@@ -12,32 +12,32 @@ var authController = require('../../controller/adminController/authController');
 router.use(passport.session());
 var LocalStrategy = require('passport-local');
 
-passport.serializeUser(function (user, done) {
+passport.serializeUser(function(user, done) {
     user = (JSON.parse(JSON.stringify(user)))
     user = JSON.stringify(user)
     done(null, user);
 });
 
-passport.deserializeUser(function (user, done) {
+passport.deserializeUser(function(user, done) {
     user = JSON.parse(user);
     AdminUser.findOne({ where: { id: user.id } })
-        .then(function (user) {
+        .then(function(user) {
             done(null, user);
-        }).catch(function (error) {
+        }).catch(function(error) {
             done(error, null);
         })
 
 });
 var crypto = require('crypto');
 passport.use(new LocalStrategy(
-    function (username, password, done) {
+    function(username, password, done) {
         AdminUser.findOne({ where: { username: username } })
-            .then(function (user) {
+            .then(function(user) {
                 if (!user) { return done(null, false); }
                 if (!user.verifyPassword(password)) { return done(null, false); }
                 return done(null, user);
             })
-            .catch(function (error) {
+            .catch(function(error) {
 
                 return done(error)
 
@@ -49,13 +49,13 @@ passport.use(new LocalStrategy(
 
 router.post('/login/password',
     passport.authenticate('local', { failureRedirect: '/admin/auth' }),
-    function (req, res) {
+    function(req, res) {
         res.redirect('/admin/dashboard');
     });
 
 
-router.get('/register', adminAuthenticated, csrfProtection, authController.get_register);
-router.post('/register', adminAuthenticated,parseForm, csrfProtection, authController.post_register);
+router.get('/register', csrfProtection, authController.get_register);
+router.post('/register', parseForm, csrfProtection, authController.post_register);
 router.get('/', csrfProtection, authController.get_login);
 router.post('/', csrfProtection, authController.post_login);
 

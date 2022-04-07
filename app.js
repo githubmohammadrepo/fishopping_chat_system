@@ -3,25 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const session = require('express-session');	//To Acquire it
+const session = require('express-session'); //To Acquire it
 var methodOverride = require('method-override');
-const hbs  = require('hbs');
-var passport = require('passport'),
-    OpenIDStrategy = require('passport-openid').Strategy;
-    var helpers = require('handlebars-helpers')({hbs:hbs});
+const hbs = require('hbs');
 
-passport.use(new OpenIDStrategy({
-        returnURL: 'http://localhost:3000/auth/openid/return',
-        realm: 'http://localhost:3000/',
-        profile: true
-    },
-    function(identifier, profile, done) {
-        User.findOrCreate({ openId: identifier }, function(err, user) {
-            done(err, user);
-        });
-    }
-));
-
+var helpers = require('handlebars-helpers')({ hbs: hbs });
 
 
 // api routers
@@ -39,9 +25,9 @@ const dashboardAdmin = require('./routes/admin/dashboard');
 var app = express();
 
 // view engine setup
-hbs.registerPartials(__dirname + '/views/partials', function (err) {});
+hbs.registerPartials(__dirname + '/views/partials', function(err) {});
 
-  
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(logger('dev'));
@@ -53,8 +39,8 @@ app.use(session({
     secret: 'mohammad',
     resave: true,
     saveUninitialized: true,
-    cookie: { secure: false,path:'/', maxAge: 60000 }
-  }))
+    cookie: { secure: false, path: '/', maxAge: 60000 }
+}))
 
 app.use(express.static(path.join(__dirname, 'public')));
 // override with the X-HTTP-Method-Override header in the request
@@ -70,6 +56,7 @@ app.use('/test', testRouter);
 
 
 // admin routers
+
 app.use('/admin/auth', authAdmin)
 app.use('/admin/group', groupAdmin)
 app.use('/admin/group', groupAdmin)
@@ -91,6 +78,8 @@ app.use(function(err, req, res, next) {
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
     // render the error page
+    console.log(err.status)
+    console.log(err)
     res.status(err.status || 500);
     res.render('500');
 });

@@ -1,4 +1,6 @@
 'use strict';
+
+
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable('UserProvinceTables', {
@@ -13,14 +15,27 @@ module.exports = {
                 type: Sequelize.STRING,
                 unique: true
             },
-            chatTableName: {
-                type: Sequelize.STRING,
-                unique: true
+
+            privateToken: {
+                allowNull: false,
+                type: Sequelize.STRING
             },
+
+            province_id: {
+                allowNull: false,
+                type: Sequelize.STRING
+            },
+
+            province_name: {
+                allowNull: false,
+                type: Sequelize.STRING
+            },
+
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
             },
+
             updatedAt: {
                 allowNull: false,
                 type: Sequelize.DATE

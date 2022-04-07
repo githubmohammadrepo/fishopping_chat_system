@@ -13,21 +13,21 @@ module.exports = {
             observer_group_id: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'usergroups', // 'Movies' would also work
+                    model: 'UserGroups', // 'Movies' would also work
                     key: 'id'
                 }
             },
             watching_group_id: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'usergroups', // 'Movies' would also work
+                    model: 'UserGroups', // 'Movies' would also work
                     key: 'id'
                 }
             },
             user_group_access: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'useraccesses', // 'Movies' would also work
+                    model: 'UserAccesses', // 'Movies' would also work
                     key: 'id'
                 }
             },

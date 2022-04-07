@@ -1,6 +1,7 @@
 'use strict';
 const {
-    Model
+    Model,
+    INTEGER
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
     class UserProvinceTable extends Model {
@@ -15,7 +16,9 @@ module.exports = (sequelize, DataTypes) => {
     }
     UserProvinceTable.init({
         userTableName: DataTypes.STRING,
-        chatTableName: DataTypes.STRING,
+        privateToken: DataTypes.STRING,
+        province_id: DataTypes.INTEGER,
+        province_name: DataTypes.STRING,
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE
     }, {
