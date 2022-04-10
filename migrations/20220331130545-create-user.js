@@ -33,9 +33,17 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.STRING
             },
+            socketId: {
+                allowNull: true,
+                type: Sequelize.STRING
+            },
             group_id: {
                 allowNull: false,
-                type: Sequelize.STRING
+                type: Sequelize.INTEGER,
+                references: {
+                    model: 'UserGroups', // 'UserProvinceTables' would also work
+                    key: 'id'
+                }
             },
             createdAt: {
                 allowNull: false,

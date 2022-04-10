@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
 
         static associate(models) {
             // define association here
+            // models.User.hasOne(models.UserGroup, { foreignKey: 'group_id', targetKey: 'id' });
+            models.User.belongsTo(models.UserGroup, { foreignKey: 'group_id', targetKey: 'id' });
+
+
         }
     }
     User.init({
@@ -23,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         province_table_id: DataTypes.INTEGER,
         province_user_id: DataTypes.INTEGER,
         openId: DataTypes.STRING,
+        socketId: DataTypes.STRING,
         group_id: DataTypes.INTEGER
     }, {
         sequelize,

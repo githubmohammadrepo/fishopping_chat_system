@@ -19,6 +19,7 @@ module.exports = {
             province_table_id: 20,
             province_user_id: 1,
             openId: crypto.randomBytes(20).toString('hex'),
+            socketId: '',
             group_id: 1,
             createdAt: moment(new Date()).format('yyyy-MM-D H:m:s'),
             updatedAt: moment(new Date()).format('yyyy-MM-D H:m:s')

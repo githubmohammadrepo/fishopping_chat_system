@@ -5,15 +5,18 @@ var router = express.Router();
 const userController = require('./../../controller/apiController/userController');
 const model = require('./../../models/index');
 const modelHelper = require('../../helpers/modelHelpers');
-var {eq,isnt} = require('handlebars-helpers')();
+const user = require('../../models/user');
+const { User, UserGroup, GroupAccess } = require('./../../models/index');
+var { eq, isnt } = require('handlebars-helpers')();
 /* GET users listing. */
-router.get('/', async function(req, res, next) {
- 
-    res.render('test/helper',{name:"mohammad",find:"mohammad1",eq:eq,isnt:isnt})
-});
 
 
-router.get('/date', function(req, res, next) {
-    res.send(moment(new Date()).format('yyyy-MM-DD HH:mm:ss'));
+router.get('/chat', (req, res) => {
+    res.render('test/chat');
 });
+
+router.get('/connect', (req, res) => {
+    res.render('test/connect');
+});
+
 module.exports = router;
